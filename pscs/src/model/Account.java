@@ -1,6 +1,8 @@
 package model;
 
-public class Account {
+import java.io.Serializable;
+
+public class Account implements Serializable {
 	//フィールド変数
 	private String accountName;
 	private String accountId;
@@ -9,6 +11,7 @@ public class Account {
 	private int userAttribute;
 	
 	//コンストラクタ
+	//アカウント名、アカウントID、パスワード、メールアドレス、利用者属性
 	public Account(String accountName, String accountId, String passoword, String mailAddress, int userAttribute) {
 		super();
 		this.accountName = accountName;
@@ -22,32 +25,41 @@ public class Account {
 	public String getAccountName() {
 		return accountName;
 	}
+	
 	public void setAccountName(String accountName) {
 		this.accountName = accountName;
 	}
+	
 	public String getAccountId() {
 		return accountId;
 	}
+	
 	public void setAccountId(String accountId) {
 		this.accountId = accountId;
 	}
+	
 	public String getPassoword() {
 		return passoword;
 	}
+	
 	public void setPassoword(String passoword) {
 		this.passoword = passoword;
 	}
+	
 	public String getMailAddress() {
 		return mailAddress;
 	}
+	
 	public void setMailAddress(String mailAddress) {
 		this.mailAddress = mailAddress;
 	}
+	
 	public int getUserAttribute() {
 		return userAttribute;
 	}
+	
 	public void setUserAttribute(int userAttribute) {
 		this.userAttribute = userAttribute;
-	}	
+	}
 	
 }
